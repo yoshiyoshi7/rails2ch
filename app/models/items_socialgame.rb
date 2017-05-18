@@ -1,0 +1,2 @@
+class ItemsSocialgame < ApplicationRecord
+end
