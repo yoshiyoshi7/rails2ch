@@ -3,7 +3,7 @@ class ItemsSocialgamesController < ApplicationController
 
   # GET /items_socialgames
   def index
-    @items_socialgames = ItemsSocialgame.all
+    @items_socialgames = ItemsSocialgame.all.order('updated_at DESC')
 
     render json: @items_socialgames
   end
@@ -46,6 +46,6 @@ class ItemsSocialgamesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def items_socialgame_params
-      params.require(:items_socialgame).permit(:title, :url, :img, :site)
+      params.require(:items_socialgame).permit(:title, :url, :img, :site, :data)
     end
 end

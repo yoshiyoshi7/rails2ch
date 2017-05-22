@@ -12,7 +12,7 @@ class ItemsSocialgamesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create items_socialgame" do
     assert_difference('ItemsSocialgame.count') do
-      post items_socialgames_url, params: { items_socialgame: { img: @items_socialgame.img, site: @items_socialgame.site, title: @items_socialgame.title, url: @items_socialgame.url } }, as: :json
+      post items_socialgames_url, params: { items_socialgame: { data: @items_socialgame.data, img: @items_socialgame.img, site: @items_socialgame.site, title: @items_socialgame.title, url: @items_socialgame.url } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class ItemsSocialgamesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update items_socialgame" do
-    patch items_socialgame_url(@items_socialgame), params: { items_socialgame: { img: @items_socialgame.img, site: @items_socialgame.site, title: @items_socialgame.title, url: @items_socialgame.url } }, as: :json
+    patch items_socialgame_url(@items_socialgame), params: { items_socialgame: { data: @items_socialgame.data, img: @items_socialgame.img, site: @items_socialgame.site, title: @items_socialgame.title, url: @items_socialgame.url } }, as: :json
     assert_response 200
   end
 

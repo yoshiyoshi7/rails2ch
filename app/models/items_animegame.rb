@@ -1,0 +1,2 @@
+class ItemsAnimegame < ApplicationRecord
+end

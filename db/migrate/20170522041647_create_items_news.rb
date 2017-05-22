@@ -1,10 +1,11 @@
-class CreateItemsSocialgames < ActiveRecord::Migration[5.1]
+class CreateItemsNews < ActiveRecord::Migration[5.1]
   def change
-    create_table :items_socialgames do |t|
+    create_table :items_news do |t|
       t.string :title
       t.string :url
       t.string :img
       t.string :site
+      t.text :data
 
       t.timestamps
     end

@@ -5,9 +5,11 @@ one:
   url: MyString
   img: MyString
   site: MyString
+  data: MyText
 
 two:
   title: MyString
   url: MyString
   img: MyString
   site: MyString
+  data: MyText

@@ -3,7 +3,7 @@ class ItemsItsController < ApplicationController
 
   # GET /items_its
   def index
-    @items_its = ItemsIt.all
+    @items_its = ItemsIt.all.order('updated_at DESC')
 
     render json: @items_its
   end
@@ -46,6 +46,6 @@ class ItemsItsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def items_it_params
-      params.require(:items_it).permit(:title, :url, :img, :site)
+      params.require(:items_it).permit(:title, :url, :img, :site, :data)
     end
 end

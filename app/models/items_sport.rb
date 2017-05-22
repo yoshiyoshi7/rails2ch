@@ -1,0 +1,2 @@
+class ItemsSport < ApplicationRecord
+end

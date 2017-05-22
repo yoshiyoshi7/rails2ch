@@ -1,0 +1,2 @@
+class ItemsEntertainer < ApplicationRecord
+end
