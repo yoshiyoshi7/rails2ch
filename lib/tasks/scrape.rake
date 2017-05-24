@@ -87,6 +87,8 @@ namespace :scrape do
       if ItemsSport.find_by(url: item.link) then
         next
       end
+
+      
       #content:encodedからimgを取得するためにparse
       doc = Nokogiri::HTML.parse(item.content_encoded, nil, "UTF-8")
       
@@ -95,7 +97,8 @@ namespace :scrape do
         url: item.link,
         img: doc.at_css('img').attribute('src').value,
         site: 'なんJ PRIDE',
-        data:item.content_encoded})
+        data:'' #![CDATA[が２つに分かれているためエラーが起きているっぽいあとで対策する
+      })
       @items_sports.save
     end
   end

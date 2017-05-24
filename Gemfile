@@ -47,4 +47,8 @@ gem 'nokogiri'
 gem 'ruby-debug-ide'
 gem 'debase'
 
+# parallel
 gem 'parallel'
+
+# crontab
+gem 'whenever', require: false
