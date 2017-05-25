@@ -52,3 +52,8 @@ gem 'parallel'
 
 # crontab
 gem 'whenever', require: false
+
+# production only
+group :production, :staging do
+    gem 'unicorn'
+end
