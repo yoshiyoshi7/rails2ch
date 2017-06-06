@@ -27,3 +27,7 @@ set :output, 'log/crontab.log'
 every 10.minute do
   rake 'scrape:all'
 end
+
+every 1.days do
+  rake 'batch:delete'
+end
