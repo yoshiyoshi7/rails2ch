@@ -54,7 +54,8 @@ namespace :scrape do
         url: item.link,
         img: doc.at_css('img').attribute('src').value,
         site: 'SIerブログ',
-        data:item.content_encoded})
+        # data:item.content_encoded
+      })
       @items_it.save
     end
   end
@@ -73,7 +74,8 @@ namespace :scrape do
         url: item.link,
         img: '',
         site: '艦これ速報',
-        data:item.content_encoded})
+        # data:item.content_encoded
+      })
       @items_socialgame.save
     end
   end
@@ -97,7 +99,7 @@ namespace :scrape do
         url: item.link,
         img: doc.at_css('img').attribute('src').value,
         site: 'なんJ PRIDE',
-        data:'' #![CDATA[が２つに分かれているためエラーが起きているっぽいあとで対策する
+        # data:'' #![CDATA[が２つに分かれているためエラーが起きているっぽいあとで対策する
       })
       @items_sports.save
     end
@@ -119,7 +121,8 @@ namespace :scrape do
         url: item.link,
         img: doc.at_css('img').attribute('src').value,
         site: 'なんじぇいスタジアム',
-        data:item.content_encoded})
+        # data:item.content_encoded
+      })
       @items_sports.save
     end
   end
@@ -141,7 +144,8 @@ namespace :scrape do
         url: item.link,
         img: doc.at_css('img').attribute('src').value,
         site: 'はちま起稿',
-        data:item.content_encoded})
+        # data:item.content_encoded
+      })
       @items_animegame.save
     end
   end
@@ -163,7 +167,8 @@ namespace :scrape do
         url: item.link,
         img: doc.at_css('img').attribute('src').value,
         site: 'ハムスター速報',
-        data:item.content_encoded})
+        # data:item.content_encoded
+      })
       @items_news.save
     end
   end
@@ -185,7 +190,8 @@ namespace :scrape do
         url: item.link,
         img: doc.at_css('img').attribute('src').value,
         site: '鬼嫁ちゃんねる',
-        data:item.content_encoded})
+        # data:item.content_encoded
+      })
       @items_life.save
     end
   end
@@ -207,7 +213,8 @@ namespace :scrape do
         url: item.link,
         img: doc.at_css('img').attribute('src').value,
         site: 'GOSSIP速報',
-        data:item.content_encoded})
+        # data:item.content_encoded
+      })
       @items_life.save
     end
   end
